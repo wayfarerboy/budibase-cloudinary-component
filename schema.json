@@ -6,14 +6,12 @@
     "friendlyName": "Cloudinary Image",
     "description": "A component to display budibase stored images as responsive cloudinary images.",
     "icon": "Image",
-    "properties": {
-      "cloudName": {
-        "type": "string",
-        "title": "Cloudinary Cloud Name",
-        "description": "Your Cloudinary cloud name for image hosting."
-      }
-    },
     "settings": [
+      {
+        "type": "text",
+        "key": "cloudName",
+        "label": "Cloudinary Cloud Name"
+      },
       {
         "type": "text",
         "key": "url",
