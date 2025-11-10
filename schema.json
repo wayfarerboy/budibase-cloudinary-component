@@ -9,8 +9,31 @@
     "settings": [
       {
         "type": "text",
-        "key": "text",
-        "label": "Text"
+        "key": "cloudName",
+        "label": "Cloudinary Cloud Name"
+      },
+      {
+        "type": "text",
+        "key": "url",
+        "label": "Base URL"
+      },
+      {
+        "type": "text",
+        "key": "alt",
+        "label": "Alt text",
+        "placeholder": "e.g. A description of the image"
+      },
+      {
+        "type": "text",
+        "key": "aspectRatio",
+        "label": "Aspect Ratio",
+        "placeholder": "e.g. 16:9 or 4:3"
+      },
+      {
+        "type": "number",
+        "key": "width",
+        "label": "Width",
+        "defaultValue": 300
       }
     ]
   }

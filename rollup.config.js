@@ -78,7 +78,7 @@ const validateSchema = () => ({
 })
 
 export default {
-  input: "index.js",
+  input: "src/Component.svelte",
   output: {
     sourcemap: process.env.ROLLUP_WATCH ? "inline" : false,
     format: "iife",
