@@ -5,6 +5,8 @@
   export let aspectRatio = "1:1";
   export let width = 300;
 
+  $: console.log("Image URL:", url);
+
   let cloudinaryUrl;
   $: {
     const transformations = [
