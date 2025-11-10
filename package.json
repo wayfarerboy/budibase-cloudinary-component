@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "description": "A component to display budibase stored images as responsive cloudinary images.",
   "license": "MIT",
-  "svelte": "src/Component.svelte",
+  "svelte": "index.js",
   "module": "dist/plugin.min.js",
   "scripts": {
     "build": "rollup -c",
