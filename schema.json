@@ -1,0 +1,17 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "budibase-cloudinary-component",
+    "friendlyName": "budibase-cloudinary-component",
+    "description": "A component to display budibase stored images as responsive cloudinary images.",
+    "icon": "Text",
+    "settings": [
+      {
+        "type": "text",
+        "key": "text",
+        "label": "Text"
+      }
+    ]
+  }
+}
