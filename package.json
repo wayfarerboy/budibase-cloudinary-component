@@ -1,6 +1,6 @@
 {
   "name": "budibase-cloudinary-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A component to display budibase stored images as responsive cloudinary images.",
   "license": "MIT",
   "svelte": "index.js",
