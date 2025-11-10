@@ -3,7 +3,7 @@
   "metadata": {},
   "schema": {
     "name": "budibase-cloudinary-component",
-    "friendlyName": "budibase-cloudinary-component",
+    "friendlyName": "Cloudinary Image",
     "description": "A component to display budibase stored images as responsive cloudinary images.",
     "icon": "Image",
     "properties": {
