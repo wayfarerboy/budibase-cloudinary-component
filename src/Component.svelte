@@ -1,16 +1,14 @@
 <script>
   import { CloudinaryImage } from "svelte-cloudinary";
 
-  export let imageUrl;
+  export let url;
+  export let alt;
   export let aspectRatio = "1:1";
-  export let maxWidth = 300;
-
-  const CLOUD_NAME = 'YOUR_CLOUD_NAME_HERE';
+  export let cloudName;
 
   let options;
   $: {
     options = {
-      width: maxWidth,
       aspectRatio: aspectRatio,
       crop: 'fill',
       gravity: 'auto',
@@ -23,14 +21,15 @@
   $: cssAspectRatio = aspectRatio.replace(':', ' / ');
 </script>
 
-{#if imageUrl}
-  <div style="max-width: {maxWidth}px; aspect-ratio: {cssAspectRatio};">
+{#if url}
+  <div style="aspect-ratio: {cssAspectRatio};">
     <CloudinaryImage
-      cloudName={CLOUD_NAME}
+      cloudName={cloudName}
       resourceType="fetch"
-      publicId={imageUrl}
+      publicId={url}
       transformation={options}
       width="100%"
+      alt={alt}
     />
   </div>
 {:else}
