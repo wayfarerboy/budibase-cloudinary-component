@@ -1,20 +1,21 @@
 <script>
-  import { CloudinaryImage } from "svelte-cloudinary";
-
+  export let cloudName;
   export let url;
   export let alt;
   export let aspectRatio = "1:1";
-  export let cloudName;
+  export let width = 300;
 
-  let options;
+  let cloudinaryUrl;
   $: {
-    options = {
-      aspectRatio: aspectRatio,
-      crop: 'fill',
-      gravity: 'auto',
-      fetchFormat: 'auto',
-      quality: 'auto',
-    };
+    const transformations = [
+      `w_${width}`,
+      `ar_${aspectRatio.replace(":", "_")}`,
+      'c_fill',
+      'g_auto',
+      'f_auto',
+      'q_auto',
+    ].join(',');
+    cloudinaryUrl = `https://res.cloudinary.com/${cloudName}/image/fetch/${transformations}/${url}`;
   }
 
   let cssAspectRatio;
@@ -22,15 +23,8 @@
 </script>
 
 {#if url}
-  <div style="aspect-ratio: {cssAspectRatio};">
-    <CloudinaryImage
-      cloudName={cloudName}
-      resourceType="fetch"
-      publicId={url}
-      transformation={options}
-      width="100%"
-      alt={alt}
-    />
+  <div style="aspect-ratio: {cssAspectRatio}; max-width: {width}px;">
+    <img src={cloudinaryUrl} alt={alt} width="100%" />
   </div>
 {:else}
   <div class="placeholder">

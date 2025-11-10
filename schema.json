@@ -28,6 +28,12 @@
         "key": "aspectRatio",
         "label": "Aspect Ratio",
         "placeholder": "e.g. 16:9 or 4:3"
+      },
+      {
+        "type": "number",
+        "key": "width",
+        "label": "Width",
+        "defaultValue": 300
       }
     ]
   }

@@ -89,7 +89,7 @@ export default {
       "svelte/internal": "svelte_internal",
     },
   },
-  external: ["svelte", "svelte/internal", "svelte-cloudinary"],
+  external: ["svelte", "svelte/internal"],
   plugins: [
     validateSchema(),
     clean(),
@@ -108,7 +108,7 @@ export default {
     resolve({
       preferBuiltins: true,
       browser: true,
-      skip: ["svelte", "svelte/internal", "svelte-cloudinary"],
+      skip: ["svelte", "svelte/internal"],
     }),
     svg(),
     json(),
